@@ -14,8 +14,8 @@
         android:layout_height="match_parent">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_avatar"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/user_size"
+            android:layout_height="@dimen/user_size"
             tools:src="@drawable/evolve"
             android:transitionName="@string/user_trans_name"
             app:layout_constraintRight_toRightOf="parent"
@@ -72,7 +72,6 @@
             android:layout_marginTop="@dimen/spacing_huge"
             app:layout_constraintTop_toBottomOf="@+id/follow"
             app:layout_constraintLeft_toLeftOf="parent" />
-
         <TextView
             android:id="@+id/followers"
             android:drawableTop="@drawable/ic_followers"
@@ -95,7 +94,7 @@
         <TextView
             android:id="@+id/time"
             style="@style/Widget.NumberText"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/spacing_large"
             android:drawableTop="@drawable/ic_music_lib"
             android:drawablePadding="@dimen/spacing_medium"
             android:layout_width="wrap_content"

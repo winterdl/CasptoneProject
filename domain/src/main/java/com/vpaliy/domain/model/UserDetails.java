@@ -8,7 +8,6 @@ public class UserDetails {
     private List<Track> tracks;
     private List<Playlist> playlists;
     private List<Track> favoriteTracks;
-    private List<WebProfile> webProfiles;
 
     public void setUser(User user) {
         this.user = user;
@@ -26,10 +25,6 @@ public class UserDetails {
         this.tracks = tracks;
     }
 
-    public void setWebProfiles(List<WebProfile> webProfiles) {
-        this.webProfiles = webProfiles;
-    }
-
     public User getUser() {
         return user;
     }
@@ -44,9 +39,5 @@ public class UserDetails {
 
     public List<Track> getTracks() {
         return tracks;
-    }
-
-    public List<WebProfile> getWebProfiles() {
-        return webProfiles;
     }
 }

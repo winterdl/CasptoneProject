@@ -18,6 +18,7 @@ public interface PlaylistContract {
         void showTitle(String title);
         void showDuration(String duration);
         void showButtons();
+        void share(String text);
         void showTrackNumber(int trackNumber);
         void showUser(User user);
         void showErrorMessage();
@@ -28,5 +29,6 @@ public interface PlaylistContract {
         void attachView(@NonNull View view);
         void stop();
         void start(String id);
+        void shareAction();
     }
 }

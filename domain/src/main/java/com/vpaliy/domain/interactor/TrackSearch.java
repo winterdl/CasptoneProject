@@ -11,7 +11,6 @@ import io.reactivex.functions.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-
 @Singleton
 public class TrackSearch extends SingleUseCase<List<Track>,String>{
 
@@ -26,7 +25,7 @@ public class TrackSearch extends SingleUseCase<List<Track>,String>{
 
     @Override
     public Single<List<Track>> buildUseCase(String query) {
-        if(query==null || TextUtils.isEmpty(query)) {
+        if(TextUtils.isEmpty(query)) {
             return Single.error(new IllegalArgumentException("Query is null"));
         }
         return repository.searchTrack(query);

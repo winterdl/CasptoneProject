@@ -5,19 +5,17 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/spacing_medium"
     xmlns:tools="http://schemas.android.com/tools">
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_art"
         tools:src="@drawable/evolve"
         android:transitionName="@string/user_trans_name"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/follower_size"
+        android:layout_height="@dimen/follower_size"
         android:layout_marginStart="@dimen/spacing_medium"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/user_name"
         tools:text="Imagine Dragons"
@@ -25,11 +23,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/Widget.Title"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/spacing_large"
         app:layout_constraintLeft_toRightOf="@+id/user_art"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintRight_toRightOf="parent" />
-
     <TextView
         android:id="@+id/followers_count"
         android:drawableStart="@drawable/ic_followers"

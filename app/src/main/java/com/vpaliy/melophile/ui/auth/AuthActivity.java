@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.gson.reflect.TypeToken;
 import com.vpaliy.melophile.App;
@@ -91,6 +92,15 @@ public class AuthActivity extends AppCompatActivity {
     public void login() {
         SoundCloudAuth.create(Config.CLIENT_ID, Config.CLIENT_SECRET_ID)
                 .loginWithActivity(this, Config.REDIRECT_URI, REQUEST_CODE);
+    }
+
+    @OnClick(R.id.invite)
+    public void invite(){
+        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+                .setMessage(getString(R.string.invite_message))
+                .setDeepLink(Uri.parse("/link"))
+                .build();
+        startActivityForResult(intent,1);
     }
 
     private void saveToken(Token token){

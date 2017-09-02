@@ -16,9 +16,5 @@ public class LimitedTracksAdapter extends TracksAdapter {
         this.limit = limit;
     }
 
-    @Override
-    public int getItemCount() {
-        int size=super.getItemCount();
-        return size>limit?limit:size;
-    }
+
 }

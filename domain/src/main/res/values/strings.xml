@@ -2,4 +2,13 @@
     <string name="app_name">domain</string>
 
     <string name="top_50">Top 50</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+    <string name="piano">Piano</string>
+    <string name="country">Country</string>
+    <string name="classical">Classical</string>
+    <string name="chilling">Chilling</string>
+    <string name="working_out">Working Out</string>
+    <string name="popular">Popular</string>
+    <string name="travel">Travel</string>
 </resources>

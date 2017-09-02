@@ -12,8 +12,9 @@ public interface PersonalContract {
     interface View extends BaseView<Presenter> {
         void attachPresenter(@NonNull Presenter presenter);
         void showTrackHistory(@NonNull List<Track> tracks);
-        void showPlaylistHistory(@NonNull List<Playlist> playlists);
+        void showEmptyHistoryMessage();
         void showMyself(User user);
+        void showErrorMessage();
     }
 
     interface Presenter extends BasePresenter<View> {
@@ -21,6 +22,5 @@ public interface PersonalContract {
         void start();
         void stop();
         void clearTrackHistory();
-        void clearPlaylistHistory();
     }
 }

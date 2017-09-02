@@ -1,9 +1,7 @@
 package com.vpaliy.melophile.ui.track;
 
 import android.content.ComponentName;
-import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
@@ -16,7 +14,6 @@ import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -26,7 +23,6 @@ import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.target.ImageViewTarget;
 import com.google.gson.reflect.TypeToken;
 import com.ohoussein.playpause.PlayPauseView;
-import com.vpaliy.domain.playback.Playback;
 import com.vpaliy.domain.playback.QueueManager;
 import com.vpaliy.melophile.App;
 import com.vpaliy.melophile.R;
@@ -36,8 +32,6 @@ import com.vpaliy.melophile.ui.base.BaseFragment;
 import com.vpaliy.melophile.ui.utils.BundleUtils;
 import com.vpaliy.melophile.ui.utils.Constants;
 import com.vpaliy.melophile.ui.utils.PresentationUtils;
-
-import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -51,8 +45,6 @@ import android.support.annotation.Nullable;
 import butterknife.BindView;
 
 public class TrackFragment extends BaseFragment {
-
-    private static final String TAG=TrackFragment.class.getSimpleName();
 
     @BindView(R.id.background)
     protected ImageView background;
@@ -115,6 +107,15 @@ public class TrackFragment extends BaseFragment {
                 MediaControllerCompat.setMediaController(getActivity(), mediaController);
                 //inject the passed query
                 inject();
+
+                PlaybackStateCompat state = mediaController.getPlaybackState();
+                updatePlaybackState(state);
+                MediaMetadataCompat metadata = mediaController.getMetadata();
+                if (metadata != null) {
+                    updateArt(metadata);
+                    updateDuration(metadata);
+                }
+                updateProgress();
             }catch (RemoteException ex){
                 ex.printStackTrace();
             }
@@ -194,8 +195,6 @@ public class TrackFragment extends BaseFragment {
                 case PlaybackStateCompat.STATE_STOPPED:
                     controls.play();
                     break;
-                default:
-                    Log.d(TAG, "State "+stateCompat.getState());
             }
         }
     }
@@ -217,8 +216,6 @@ public class TrackFragment extends BaseFragment {
                 startSeekBarUpdate();
                 break;
             case PlaybackStateCompat.STATE_PAUSED:
-                // mControllers.setVisibility(VISIBLE);
-                // mLoading.setVisibility(INVISIBLE);
                 playPause.setVisibility(VISIBLE);
                 if(!playPause.isPlay()){
                     playPause.change(true,true);
@@ -237,8 +234,6 @@ public class TrackFragment extends BaseFragment {
                 playPause.setVisibility(INVISIBLE);
                 stopSeekBarUpdate();
                 break;
-            default:
-                Log.d(TAG, "Unhandled state "+stateCompat.getState());
         }
     }
 
@@ -401,7 +396,7 @@ public class TrackFragment extends BaseFragment {
     private void updateArt(MediaMetadataCompat metadataCompat){
         if(metadataCompat==null) return;
         String text=metadataCompat.getLong(MediaMetadataCompat.METADATA_KEY_TRACK_NUMBER)
-                +" of "+metadataCompat.getLong(MediaMetadataCompat.METADATA_KEY_NUM_TRACKS);
+                +getString(R.string.of_label)+metadataCompat.getLong(MediaMetadataCompat.METADATA_KEY_NUM_TRACKS);
         trackName.setText(metadataCompat.getText(MediaMetadataCompat.METADATA_KEY_DISPLAY_TITLE));
         artist.setText(metadataCompat.getText(MediaMetadataCompat.METADATA_KEY_ARTIST));
         pages.setText(text);

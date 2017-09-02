@@ -2,6 +2,8 @@ package com.vpaliy.melophile.ui.playlist;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -66,7 +68,7 @@ public class PlaylistFragment extends BaseFragment
     @BindView(R.id.tracks)
     protected RecyclerView tracks;
 
-    @BindView(R.id.love)
+    @BindView(R.id.play)
     protected FabToggle toggle;
 
     @BindView(R.id.parent)
@@ -268,7 +270,7 @@ public class PlaylistFragment extends BaseFragment
         }
     }
 
-    @OnClick(R.id.love)
+    @OnClick(R.id.play)
     public void play(){
         List<Track> tracks=adapter.getTracks();
         if(tracks!=null && !tracks.isEmpty()){
@@ -280,18 +282,24 @@ public class PlaylistFragment extends BaseFragment
         }
     }
 
+    @Override
+    public void share(String text){
+        Intent intent=new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT,text);
+        intent.setType("text/plain");
+        startActivity(Intent.createChooser(intent,getString(R.string.chooseToWhomToSend)));
+    }
+
+    @OnClick(R.id.share)
+    public void share(){
+        presenter.shareAction();
+    }
+
     private void applyPalette(Palette palette){
         Palette.Swatch swatch=palette.getDarkVibrantSwatch();
         if(swatch==null) swatch=palette.getDominantSwatch();
-        //apply if not null
         if(swatch!=null){
-            // parent.setBackgroundColor(swatch.getRgb());
-            //playlistTitle.setTextColor(swatch.getTitleTextColor());
-            //trackNumber.setTextColor(swatch.getTitleTextColor());
-            //shareButton.setTextColor(swatch.getTitleTextColor());
-            //PresentationUtils.setDrawableColor(back,swatch.getTitleTextColor());
-            //PresentationUtils.setDrawableColor(trackNumber,swatch.getTitleTextColor());
-            //PresentationUtils.setDrawableColor(shareButton,swatch.getTitleTextColor());
+            toggle.setBackgroundTintList(ColorStateList.valueOf(swatch.getRgb()));
         }
     }
 

@@ -174,7 +174,7 @@ public class TrackNotification {
         builder.setStyle(new  NotificationCompat.MediaStyle()
                 .setMediaSession(token)
                 .setShowActionsInCompactView(1))
-                .setColor(Color.WHITE)
+                .setColor(Color.BLACK)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setUsesChronometer(true)

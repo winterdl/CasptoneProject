@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000</color>
+    <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">@color/mid_grey</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#ffffff</color>
@@ -60,6 +60,4 @@
     <color name="page_indicator_dark_selected">#ff333333</color>
     <color name="selected_comment_background">#ffffffff</color>
     <color name="error">#ffdd2c00</color>
-
-
 </resources>

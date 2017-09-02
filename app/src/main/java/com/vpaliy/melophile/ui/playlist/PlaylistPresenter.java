@@ -26,6 +26,7 @@ public class PlaylistPresenter implements PlaylistContract.Presenter{
     private LoaderManager manager;
     private LoaderCallback<Playlist,String> playlistLoader;
     private View view;
+    private Playlist last;
 
     @Inject
     public PlaylistPresenter(GetPlaylist playlistUseCase, SaveInteractor saveInteractor){
@@ -42,6 +43,7 @@ public class PlaylistPresenter implements PlaylistContract.Presenter{
 
     private void catchData(Playlist playlist){
         if(playlist!=null){
+            last=playlist;
             saveInteractor.savePlaylist(playlist);
             List<String> tags=tags(playlist);
             if(!tags.isEmpty()) {
@@ -73,6 +75,13 @@ public class PlaylistPresenter implements PlaylistContract.Presenter{
     private void catchError(Throwable ex){
         ex.printStackTrace();
         view.showErrorMessage();
+    }
+
+    @Override
+    public void shareAction() {
+        if(last!=null){
+            view.share(last.getTitle());
+        }
     }
 
     @Override

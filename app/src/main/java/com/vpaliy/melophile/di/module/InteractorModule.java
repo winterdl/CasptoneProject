@@ -30,7 +30,6 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
-//TODO are you sure they should live all the time???
 
 @Module
 public class InteractorModule {

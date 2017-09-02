@@ -14,7 +14,6 @@ import com.vpaliy.domain.interactor.PlaylistSearch;
 import com.vpaliy.domain.interactor.SaveInteractor;
 import com.vpaliy.domain.interactor.TrackSearch;
 import com.vpaliy.domain.interactor.UserSearch;
-import com.vpaliy.domain.loader.PlaylistsFactory;
 import com.vpaliy.domain.loader.ThemeFactory;
 import com.vpaliy.domain.model.Track;
 import com.vpaliy.domain.model.User;
@@ -75,7 +74,7 @@ public class PresenterModule {
     }
 
     @ViewScope @Provides
-    PersonalContract.Presenter personal(PlaylistHistory playlistHistory, TrackHistory trackHistory, GetMe getMe){
-        return new PersonalPresenter(trackHistory, playlistHistory,getMe);
+    PersonalContract.Presenter personal(TrackHistory trackHistory, GetMe getMe){
+        return new PersonalPresenter(trackHistory,getMe);
     }
 }
