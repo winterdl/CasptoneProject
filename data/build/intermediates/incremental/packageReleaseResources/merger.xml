@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/src/main/res"/><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/build/generated/res/rs/release"/><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/build/generated/res/resValues/release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/src/release/res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/src/main/res"><file path="/home/vpaliy/AndroidProjects/Melophile-master/data/src/main/res/values/strings.xml" qualifiers=""><plurals name="minutes">
-        <item quantity="zero"> </item>
-        <item quantity="other">%s min</item>
-    </plurals><string name="hour_label">hr</string><plurals name="hours">
-        <item quantity="one">%s hr</item>
-        <item quantity="other">%s hrs</item>
-    </plurals><string name="app_name">data</string><string name="min_label">min</string><string name="hours_label">hrs</string></file></source><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/build/generated/res/rs/release"/><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/build/generated/res/resValues/release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="/home/vpaliy/AndroidProjects/Melophile-master/data/src/release/res"/></dataSet><mergedItems/></merger>
