@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "459231337651",
+    "firebase_url": "https://melophile-app.firebaseio.com",
+    "project_id": "melophile-app",
+    "storage_bucket": "melophile-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459231337651:android:e19f7e0391964c96",
+        "android_client_info": {
+          "package_name": "com.vpaliy.melophile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459231337651-gm52b6sk762p9dt5bmt860seckmffkj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdT0Ol5JiHGkz0iV7DSZpglXEc73oPkGA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

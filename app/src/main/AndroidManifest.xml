@@ -1,0 +1,92 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vpaliy.melophile">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MelophileTheme">
+        <activity
+            android:name=".ui.home.HomeActivity">
+        </activity>
+
+        <service
+            android:name=".playback.service.MusicPlaybackService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".ui.playlist.PlaylistActivity"
+            android:theme="@style/MelophileTheme.Details"/>
+
+        <activity android:name=".ui.track.TrackActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MelophileTheme.Track"/>
+
+        <activity android:name=".ui.user.PersonActivity"
+            android:theme="@style/MelophileTheme.User"/>
+
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MelophileTheme.Search"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity
+            android:name=".ui.auth.AuthActivity"
+            android:theme="@style/MelophileTheme.Auth"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="jlubecki"
+                    android:host="soundcloud"
+                    android:pathPrefix="/redirect"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".widget.MusicWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.vpaliy.melophile.stop_widget"/>
+                <action android:name="com.vpaliy.melophile.update" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music" />
+        </receiver>
+        <provider
+            android:exported="false"
+            android:authorities="com.vpaliy.melophile"
+            android:name="com.vpaliy.data.source.local.MusicProvider"/>
+    </application>
+</manifest>

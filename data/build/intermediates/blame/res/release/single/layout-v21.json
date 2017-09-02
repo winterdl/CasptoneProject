@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

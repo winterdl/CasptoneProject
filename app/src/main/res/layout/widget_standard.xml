@@ -1,0 +1,87 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:id="@+id/root"
+    android:padding="4dp">
+    <ImageView
+        android:id="@+id/cover"
+        android:padding="4dp"
+        tools:src="@drawable/play_pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:ignore="ContentDescription"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:visibility="invisible"
+        android:ellipsize="end"
+        android:layout_toEndOf="@+id/cover" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/author_message"
+        style="@style/Widget.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:text="@string/tap_to_continue_message"
+        android:paddingTop="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/cover" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/author_message"
+        android:layout_toEndOf="@+id/cover"
+        android:weightSum="1"
+        android:gravity="top">
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_item_background"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_prev"
+            tools:ignore="ContentDescription"/>
+        <ImageView
+            android:id="@+id/play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_item_background"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_play"
+            tools:ignore="ContentDescription"/>
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_item_background"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_next"
+            tools:ignore="ContentDescription"/>
+    </LinearLayout>
+</RelativeLayout>

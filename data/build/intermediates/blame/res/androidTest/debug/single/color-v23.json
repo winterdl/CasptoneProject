@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/vpaliy/AndroidProjects/Melophile-master/data/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/vpaliy/.android/build-cache/f7389f4df4620966d279ebe34e9683200a8a575e/output/res/color-v23/abc_tint_default.xml"
+    }
+]
