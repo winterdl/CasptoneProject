@@ -20,6 +20,7 @@ Also you can follow/unfollow others, like/unlike a song and browse your own list
 ![](https://github.com/vpaliyX/CasptoneProject/blob/master/art/second_2.png)
 ![](https://github.com/vpaliyX/CasptoneProject/blob/master/art/first_1.png)
 ![](https://github.com/vpaliyX/CasptoneProject/blob/master/art/third.png)
+![](https://github.com/vpaliyX/CasptoneProject/blob/master/art/player.png)
 ![](https://github.com/vpaliyX/CasptoneProject/blob/master/art/sixth.png)
 
 ## License ##
