@@ -20,23 +20,15 @@ public class CategoryAdapter extends BaseAdapter<CategoryAdapter.CategoryWrapper
         super(context,rxBus);
     }
 
-    class TypeViewHolder extends GenericViewHolder
-            implements View.OnClickListener{
+    class TypeViewHolder extends GenericViewHolder {
 
         @BindView(R.id.playlists) RecyclerView list;
         @BindView(R.id.title) TextView title;
-        @BindView(R.id.more) TextView more;
 
         TypeViewHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this,itemView);
             list.setNestedScrollingEnabled(false);
-            title.setOnClickListener(this);
-            more.setOnClickListener(this);
-        }
-
-        @Override
-        public void onClick(View v) {
         }
 
         @Override
@@ -44,7 +36,6 @@ public class CategoryAdapter extends BaseAdapter<CategoryAdapter.CategoryWrapper
             CategoryWrapper wrapper=at(getAdapterPosition());
             list.setAdapter(wrapper.adapter);
             title.setText(wrapper.text);
-            more.setTextColor(wrapper.color);
         }
     }
 

@@ -25,16 +25,21 @@
         <TextView
             android:id="@+id/title"
             tools:text="Favorite Tracks"
+            android:textColor="@color/colorPrimary"
             android:textAppearance="@style/Widget.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/playlist_title"/>
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/data"
+        android:id="@+id/favorites"
         android:orientation="vertical"
         app:layoutManager="@string/home_layout_manager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/list_of_songs"/>
+        android:contentDescription="@string/user_liked_tracks">
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

@@ -9,9 +9,9 @@ def testLibs=rootProject.ext.testDependencies;
 android {
     signingConfigs {
         release {
-            keyAlias 'melophile app'
+            keyAlias 'melophile'
             keyPassword 'dfcbkm123'
-            storeFile file('/home/vpaliy/keystore/key.jks')
+            storeFile file("$rootDir/key.jks")
             storePassword 'dfcbkm123'
         }
     }
@@ -45,6 +45,7 @@ android {
 dependencies {
     compile project(':domain')
     compile project(':data')
+
     compile libs.exoplayer
     compile libs.playPause
     compile libs.bottomNavigation
@@ -70,6 +71,7 @@ dependencies {
     compile libs.RxAndroid
     compile libs.palette
     compile libs.rxRelay
+    compile libs.gson
     annotationProcessor libs.Dagger2Compiler
     annotationProcessor libs.butterKnifeCompiler
     provided libs.javaxAnnotation
